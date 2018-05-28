@@ -22,7 +22,6 @@ config.bind(',d', 'spawn -d youtube-dl {url}')
 config.bind(',D', 'hint links spawn -d youtube-dl -c -o ~/Videos/%(title)s.%(ext)s {hint-url}')
 config.bind(',lD', 'hint links spawn -d youtube-dl -c -f "bestvideo[height<=720]+bestaudio/best[height<=720]" -o ~/Videos/%(title)s.%(ext)s {hint-url}')
 config.bind(',S', 'hint links spawn -d youtube-dl -c -x -o ~/Sounds/%(title)s.%(ext)s {hint-url}')
-config.bind(',rtd', 'hint links spawn -d youtube-dl -c -u 2goose -p Iheartmom222 -o ~/Videos/Anime/RWBY/%(title)s.%(ext)s {hint-url}')
 # Download a torrent mirror
 config.bind(',tm', 'hint links spawn deluge-console add {hint-url}')
 
