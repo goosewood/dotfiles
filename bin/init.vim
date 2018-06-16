@@ -79,9 +79,9 @@ autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c
 	autocmd FileType tex inoremap ;f \begin{frame}<Enter><Enter>\end{frame}<Enter><Enter><++><Esc>3ki
 
 
-inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-map <Space><Tab> <Esc>/<++><Enter>"_c4l
+inoremap <c-Space> <Esc>/<++><Enter>"_c4l
+vnoremap <c-Space> <Esc>/<++><Enter>"_c4l
+map <c-Space> <Esc>/<++><Enter>"_c4l
 inoremap ;gui <++>
 
 " markdown
@@ -91,6 +91,7 @@ inoremap ;gui <++>
 	autocmd Filetype markdown,rmd inoremap ;i **<++><Esc>F*i
 	autocmd BufNewFile *.md :!bash ~/Scripts/template.sh % md
 	autocmd Filetype markdown inoremap ;s ~~<++><Esc>F~i
+	autocmd Filetype markdown inoremap ;t <bar><space>*<space><bar><space><++><space><bar><return><bar>----------<bar>----------<bar><return><bar><space><++><space><bar><space><++><space><bar><Esc>2kF*s
 	autocmd FileType markdown :call matchadd('ColorColumn', '\%81v', 100)
 
 function! BuildComposer(info)
@@ -105,7 +106,9 @@ endfunction
 
 
 " python
-
+autocmd Filetype python inoremap def def<space>*(<++>):<Return>'''<Return><++><Return>'''<Return><++><Esc>4kF*s
+autocmd Filetype python inoremap while while<space>*:<Esc>F*s
+autocmd Filetype python inoremap for for<space>*:<Esc>F*s
 highlight ColorColumn ctermbg=magenta
 
 	autocmd FileType python :call matchadd('ColorColumn', '\%81v', 100)
@@ -118,7 +121,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 "Plug 'vim-syntastic/syntastic'
-Plug 'python-mode/python-mode'
+"Plug 'python-mode/python-mode'
 "Plug 'mboughaba/i3config.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'zchee/deoplete-clang'
@@ -131,8 +134,8 @@ Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 "Plug 'neovim/neovim'
 "Plug 'roxma/vim-hug-neovim-rpc'
 "Plug 'neovim/python-client'
-"Plug 'davidhalter/jedi'
-"Plug 'zchee/deoplete-jedi'
+Plug 'davidhalter/jedi'
+Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-zsh'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
