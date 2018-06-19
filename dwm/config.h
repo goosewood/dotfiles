@@ -7,10 +7,10 @@ static const int start_with_gaps	= 1;
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "scientifica","Fixed:pixelsize=13", "hack:pixelsize=9:antialias=false", "mplus:pixelsize=10","inconsolata:pixelsize=11","ipamincho:pixelsize=8:antialias=false", "symbola:size=10","unifont:pixelsize=5:antialias=false" };
+static const char *fonts[]          = { "scientifica:antialias=false","Fixed:pixelsize=13:antialias=false", "mdi", "hack:pixelsize=9:antialias=false", "mplus:pixelsize=10","inconsolata:pixelsize=11:antialias=false","ipamincho:pixelsize=8:antialias=false", "symbola:size=10:antialias=false","unifont:pixelsize=5:antialias=false" };
 
 /* pywal colors */
-#include "/home/void/.cache/wal/colors-wal-dwm.h"
+#include "/home/love/.cache/wal/colors-wal-dwm.h"
 #include "selfrestart.c"
 #include "mpdcontrol.c"
 #include "fibonacci.c"
@@ -40,11 +40,11 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ /*"[]="*/"0",      tile },    /* first entry is default */
-	{ /*"><>"*/"0",      NULL },    /* no layout function means floating behavior */
-	{ /*"[M]"*/"0",      monocle },
-	{ /*"|M|"*/"0",      centeredmaster },
-	{ /*">M>"*/"0",      centeredfloatingmaster },
+	{ /*"[]="*/"愛",      tile },    /* first entry is default */
+	{ /*"><>"*/"愛",      NULL },    /* no layout function means floating behavior */
+	{ /*"[M]"*/"愛",      monocle },
+	{ /*"|M|"*/"愛",      centeredmaster },
+	{ /*">M>"*/"愛",      centeredfloatingmaster },
 
 };
 

@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-/* static const char *font[] = { "scientifica","Fixed:pixelsize=13", "hack:pixelsize=9:antialias=false", "mplus:pixelsize=10","inconsolata:pixelsize=11","ipamincho:pixelsize=8:antialias=false", "symbola","unifont:pixelsize=5:antialias=false" }; */
-static char font[] = "scientifica";
+/* static const char *font[] = { "curie", "scientifica","Fixed:pixelsize=13", "hack:pixelsize=9:antialias=false", "mplus:pixelsize=10","inconsolata:pixelsize=11","ipamincho:pixelsize=8:antialias=false", "symbola","unifont:pixelsize=5:antialias=false" }; */
+static char font[] = "scientifica:antialias=false";
 static int borderpx = 2;
 
 /*
@@ -87,9 +87,7 @@ static unsigned int tabspaces = 8;
 static const int alpha = 0xB4;
 
 /* Terminal colors (16 first used in escape sequence) */
-#include "/home/void/.cache/wal/colors-wal-st.h"
-
-static unsigned int defaultrcs = 15;
+#include "/home/love/.cache/wal/colors-wal-st.h"
 
 /*
  * Default shape of cursor
