@@ -2,15 +2,15 @@
 
 /* appearance */
 static const int GAP_PX             = 12;		/* gap size */
-static const int BORDER_PX          = 2;		/* border pixel of windows  */
+static const int BORDER_PX          = 4;		/* border pixel of windows  */
 static const int start_with_gaps	= 1;
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "scientifica:antialias=false","Fixed:pixelsize=13:antialias=false", "mdi", "hack:pixelsize=9:antialias=false", "mplus:pixelsize=10","inconsolata:pixelsize=11:antialias=false","ipamincho:pixelsize=8:antialias=false", "symbola:size=10:antialias=false","unifont:pixelsize=5:antialias=false" };
+static const char *fonts[]          = { "scientifica:antialias=false", "'Material Design Icons'", "Fixed:pixelsize=13:antialias=false", "hack:pixelsize=9:antialias=false", "mplus:pixelsize=10","inconsolata:pixelsize=11:antialias=false","ipamincho:pixelsize=8:antialias=false" };
 
 /* pywal colors */
-#include "/home/love/.cache/wal/colors-wal-dwm.h"
+#include "/home/goosie/.cache/wal/colors-wal-dwm.h"
 #include "selfrestart.c"
 #include "mpdcontrol.c"
 #include "fibonacci.c"
@@ -72,6 +72,7 @@ static const char *killffmpeg[]    = { "killall", "ffmpeg", NULL };
 static const char *ffmpeg[]        = { "ffmpeg", "-f", "x11grab", "-s", "1280x800", "-r", "25", "-i", ":0.0", "output.mkv", NULL };
 static const char *web[]           = { "qutebrowser", NULL };
 static const char *fire[]          = { "firefox", NULL };
+static const char *cmus[]          = { "tmux", "attach-session", "-t","cmus","||","tmux","new-session","-A","-D","-s","cmus","'$(which","cmus)'", NULL };
 static const char *gimp[]          = { "gimp", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st","-t",scratchpadname,"-g","120x34",NULL };
@@ -87,6 +88,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = fire } },
 	{ MODKEY,                       XK_F8,     spawn,          {.v = shot } },
 	{ MODKEY,                       XK_i,      spawn,          {.v = lock } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = cmus } },
 	{ MODKEY|ShiftMask,             XK_g,      spawn,          {.v = gimp } },
 	{ MODKEY,                       XK_g,      togglegaps,     {0} },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = killffmpeg } },

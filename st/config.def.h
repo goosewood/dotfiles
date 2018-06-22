@@ -87,7 +87,7 @@ static unsigned int tabspaces = 8;
 static const int alpha = 0xB4;
 
 /* Terminal colors (16 first used in escape sequence) */
-#include "/home/love/.cache/wal/colors-wal-st.h"
+#include "/home/goosie/.cache/wal/colors-wal-st.h"
 
 /*
  * Default shape of cursor
